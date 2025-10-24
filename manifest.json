@@ -1,0 +1,121 @@
+{
+  "name": "HHS Booking System",
+  "short_name": "HHS Booking",
+  "description": "Book sports facilities at Harvard House Sports - Management Portal",
+  "start_url": "/?role=admin",
+  "display": "standalone",
+  "background_color": "#2d2e6e",
+  "theme_color": "#2d2e6e",
+  "scope": "/",
+  "display_override": ["window-standalone", "standalone", "browser"],
+  "orientation": "portrait-primary",
+  "categories": ["sports", "booking", "business", "productivity"],
+  "shortcuts": [
+    {
+      "name": "New Booking",
+      "short_name": "Book",
+      "description": "Create a new booking",
+      "url": "/?action=new-booking",
+      "icons": [
+        {
+          "src": "icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "View Calendar",
+      "short_name": "Calendar",
+      "description": "Check availability calendar",
+      "url": "/?view=calendar",
+      "icons": [
+        {
+          "src": "icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "lang": "en",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "permissions": ["notifications"],
+  "gcm_sender_id": "12685257995",
+  "protocol_handlers": [
+    {
+      "protocol": "web+hhsbooking",
+      "url": "/?role=admin&action=%s"
+    }
+  ],
+  "file_handlers": [
+    {
+      "action": "/",
+      "accept": {
+        "text/plain": [".txt"],
+        "application/json": [".json"]
+      }
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "icons": [
+    {
+      "src": "icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable",
+      "platform": "android"
+    },
+    {
+      "src": "icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable",
+      "platform": "android"
+    },
+    {
+      "src": "icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "monochrome"
+    },
+    {
+      "src": "icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "monochrome"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "icon-512x512.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "HHS Booking Management Dashboard"
+    },
+    {
+      "src": "icon-512x512.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "HHS Booking Mobile Management"
+    }
+  ],
+  "related_applications": [],
+  "iarc_rating_id": "",
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  }
+}

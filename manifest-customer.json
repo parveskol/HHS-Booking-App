@@ -1,0 +1,112 @@
+{
+  "name": "HHS Booking",
+  "short_name": "HHS Booking",
+  "description": "Book sports facilities at Harvard House Sports - Customer Portal",
+  "start_url": "/?role=customer",
+  "display": "standalone",
+  "background_color": "#2d2e6e",
+  "theme_color": "#2d2e6e",
+  "scope": "/",
+  "display_override": ["window-standalone", "standalone", "browser"],
+  "orientation": "portrait-primary",
+  "categories": ["sports", "booking", "lifestyle"],
+  "shortcuts": [
+    {
+      "name": "Book Facility",
+      "short_name": "Book",
+      "description": "Book a sports facility",
+      "url": "/?action=book-facility",
+      "icons": [
+        {
+          "src": "icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "My Bookings",
+      "short_name": "Bookings",
+      "description": "View my booking requests",
+      "url": "/?view=bookings",
+      "icons": [
+        {
+          "src": "icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "lang": "en",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "permissions": ["notifications"],
+  "gcm_sender_id": "12685257995",
+  "protocol_handlers": [
+    {
+      "protocol": "web+hhsbooking",
+      "url": "/?role=customer&action=%s"
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "icons": [
+    {
+      "src": "icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable",
+      "platform": "android"
+    },
+    {
+      "src": "icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable",
+      "platform": "android"
+    },
+    {
+      "src": "icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "monochrome"
+    },
+    {
+      "src": "icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "monochrome"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "icon-512x512.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "HHS Booking Customer Dashboard"
+    },
+    {
+      "src": "icon-512x512.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "HHS Booking Mobile Customer"
+    }
+  ],
+  "related_applications": [],
+  "iarc_rating_id": "",
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  }
+}
